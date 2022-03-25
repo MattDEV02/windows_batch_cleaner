@@ -8,6 +8,6 @@ ECHO Optimizing C: unity...
 Defrag /D /C && ECHO C: unity optimized.
 ECHO Optimizing RAM... && ipconfig /FlushDNS && net start dnscache && ECHO RAM optimized. 
 sfc /scannow 
-CD %ProgramFiles%\Windows Defender && MpCmdRun -Scan -ScanType 2 -Trace -SignatureUpdate -Restore && MpCopyAccelerator 
+CD %ProgramFiles%\Windows Defender && MpCmdRun -Scan -ScanType 2 -Trace -SignatureUpdate -Restore && MpCopyAccelerator && mrt /F:Y
 ECHO: && ECHO Batch script finished. && ECHO: && PAUSE
 ::%windir%\system32\rundll32 advapi32.dll, ProcessIdleTasks
